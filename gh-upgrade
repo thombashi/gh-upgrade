@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -eu
+
+TMP_DIR=$(mktemp -d)
+cd "${TMP_DIR}"
+trap 'rm -rf ${TMP_DIR}' 0 1 2 3 15
+
+gh extension upgrade --all
+
+gh repo clone thombashi/gh-update 2> /dev/null
+./gh-update/gh-update
