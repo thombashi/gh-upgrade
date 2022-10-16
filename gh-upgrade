@@ -8,5 +8,5 @@ trap 'rm -rf ${TMP_DIR}' 0 1 2 3 15
 
 gh extension upgrade --all
 
-gh repo clone thombashi/gh-update 2> /dev/null
+gh repo clone thombashi/gh-update -- --depth=1 2> /dev/null
 ./gh-update/gh-update
