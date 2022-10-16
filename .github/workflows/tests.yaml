@@ -32,12 +32,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -ux
+
           INSTALL_VERSION=v2.14.7
 
           curl -sS https://raw.githubusercontent.com/thombashi/gh-installer/main/setup-gh.sh | sudo sh -s "$INSTALL_VERSION"
           gh version | grep -w "$INSTALL_VERSION"
 
-          sudo -E gh gh-upgrade
+          sudo -E gh upgrade
           if grep -qw "$INSTALL_VERSION"; then
             echo "unexpected gh version found" 1>&2
             gh version
