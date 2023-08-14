@@ -22,7 +22,5 @@ sudo -E gh upgrade
 
 
 ## Related projects
-- [thombashi/gh-installer](https://github.com/thombashi/gh-installer)
-  - Simple one-liner installer of gh (cli/cli) from the release assets.
 - [thombashi/gh-update](https://github.com/thombashi/gh-update)
   - `gh-update` is a `gh` extension that updates the gh to the latest version.
