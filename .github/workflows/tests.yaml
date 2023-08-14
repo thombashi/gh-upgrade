@@ -36,7 +36,7 @@ jobs:
 
           INSTALL_VERSION=v2.14.7
 
-          curl -sS https://raw.githubusercontent.com/thombashi/install-gh/main/setup-gh.sh | sudo sh -s "$INSTALL_VERSION"
+          curl -sS https://raw.githubusercontent.com/thombashi/install-gh/main/setup-gh.sh | sudo sh -x -s "$INSTALL_VERSION"
           gh version | grep -w "$INSTALL_VERSION"
 
           sudo -E gh upgrade
